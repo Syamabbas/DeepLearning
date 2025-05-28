@@ -3,21 +3,21 @@
   {
    "cell_type": "code",
    "execution_count": 1,
-   "id": "f4f7560c",
+   "id": "2f48c055",
    "metadata": {
     "_cell_guid": "b1076dfc-b9ad-4769-8c92-a6c4dae69d19",
     "_uuid": "8f2839f25d086af736a60e9eeb907d3b93b6e0e5",
     "execution": {
-     "iopub.execute_input": "2025-05-25T10:09:43.592473Z",
-     "iopub.status.busy": "2025-05-25T10:09:43.592270Z",
-     "iopub.status.idle": "2025-05-25T10:09:44.488437Z",
-     "shell.execute_reply": "2025-05-25T10:09:44.487349Z"
+     "iopub.execute_input": "2025-05-28T07:23:17.493423Z",
+     "iopub.status.busy": "2025-05-28T07:23:17.493187Z",
+     "iopub.status.idle": "2025-05-28T07:23:18.353863Z",
+     "shell.execute_reply": "2025-05-28T07:23:18.352478Z"
     },
     "papermill": {
-     "duration": 0.904658,
-     "end_time": "2025-05-25T10:09:44.490318",
+     "duration": 0.86927,
+     "end_time": "2025-05-28T07:23:18.355883",
      "exception": false,
-     "start_time": "2025-05-25T10:09:43.585660",
+     "start_time": "2025-05-28T07:23:17.486613",
      "status": "completed"
     },
     "tags": []
@@ -27,8 +27,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "/kaggle/input/datasethargaemasindikatormoneter/Validation Data.csv\n",
-      "/kaggle/input/datasethargaemasindikatormoneter/Data Gabungan Lengkap Fix.csv\n",
+      "/kaggle/input/datasethargaemasindikatormoneter/Final Dataset Gold Prediction.csv\n",
       "/kaggle/input/datasethargaemasindikatormoneter/Data Gabungan Lengkap.csv\n"
      ]
     }
@@ -55,37 +54,38 @@
   },
   {
    "cell_type": "markdown",
-   "id": "745e7501",
+   "id": "29f05e99",
    "metadata": {
     "papermill": {
-     "duration": 0.00617,
-     "end_time": "2025-05-25T10:09:44.508125",
+     "duration": 0.006366,
+     "end_time": "2025-05-28T07:23:18.370165",
      "exception": false,
-     "start_time": "2025-05-25T10:09:44.501955",
+     "start_time": "2025-05-28T07:23:18.363799",
      "status": "completed"
     },
     "tags": []
    },
    "source": [
-    "# **1. Gru Model**"
+    "# **1. Gru Model**\n",
+    "- Skenario 1A: Menggunakan hanya harga emas historis sebagai fitur (univariate time series)."
    ]
   },
   {
    "cell_type": "code",
    "execution_count": 2,
-   "id": "a71b05ca",
+   "id": "f820806b",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-05-25T10:09:44.519606Z",
-     "iopub.status.busy": "2025-05-25T10:09:44.519250Z",
-     "iopub.status.idle": "2025-05-25T10:10:00.168603Z",
-     "shell.execute_reply": "2025-05-25T10:10:00.167964Z"
+     "iopub.execute_input": "2025-05-28T07:23:18.382205Z",
+     "iopub.status.busy": "2025-05-28T07:23:18.381806Z",
+     "iopub.status.idle": "2025-05-28T07:23:32.920810Z",
+     "shell.execute_reply": "2025-05-28T07:23:32.919869Z"
     },
     "papermill": {
-     "duration": 15.656844,
-     "end_time": "2025-05-25T10:10:00.170273",
+     "duration": 14.546344,
+     "end_time": "2025-05-28T07:23:32.922443",
      "exception": false,
-     "start_time": "2025-05-25T10:09:44.513429",
+     "start_time": "2025-05-28T07:23:18.376099",
      "status": "completed"
     },
     "tags": []
@@ -115,19 +115,19 @@
   {
    "cell_type": "code",
    "execution_count": 3,
-   "id": "0a992814",
+   "id": "6ccbaba0",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-05-25T10:10:00.182613Z",
-     "iopub.status.busy": "2025-05-25T10:10:00.182130Z",
-     "iopub.status.idle": "2025-05-25T10:10:00.225489Z",
-     "shell.execute_reply": "2025-05-25T10:10:00.224803Z"
+     "iopub.execute_input": "2025-05-28T07:23:32.934396Z",
+     "iopub.status.busy": "2025-05-28T07:23:32.933880Z",
+     "iopub.status.idle": "2025-05-28T07:23:32.967430Z",
+     "shell.execute_reply": "2025-05-28T07:23:32.966619Z"
     },
     "papermill": {
-     "duration": 0.050472,
-     "end_time": "2025-05-25T10:10:00.226674",
+     "duration": 0.040455,
+     "end_time": "2025-05-28T07:23:32.968593",
      "exception": false,
-     "start_time": "2025-05-25T10:10:00.176202",
+     "start_time": "2025-05-28T07:23:32.928138",
      "status": "completed"
     },
     "tags": []
@@ -157,11 +157,8 @@
        "      <th>Date</th>\n",
        "      <th>Price</th>\n",
        "      <th>Kurs</th>\n",
-       "      <th>Inflasi</th>\n",
-       "      <th>IndONIA</th>\n",
        "      <th>Cadangan Devisa</th>\n",
        "      <th>Money Supply (M2)</th>\n",
-       "      <th>Minyak</th>\n",
        "    </tr>\n",
        "  </thead>\n",
        "  <tbody>\n",
@@ -170,74 +167,52 @@
        "      <td>1/3/2017</td>\n",
        "      <td>606000</td>\n",
        "      <td>13485</td>\n",
-       "      <td>3.49</td>\n",
-       "      <td>4.12408</td>\n",
        "      <td>116.9</td>\n",
        "      <td>4936881.99</td>\n",
-       "      <td>52.33</td>\n",
        "    </tr>\n",
        "    <tr>\n",
        "      <th>1</th>\n",
        "      <td>1/4/2017</td>\n",
        "      <td>606000</td>\n",
        "      <td>13478</td>\n",
-       "      <td>3.49</td>\n",
-       "      <td>4.12935</td>\n",
        "      <td>116.9</td>\n",
        "      <td>4936881.99</td>\n",
-       "      <td>53.26</td>\n",
        "    </tr>\n",
        "    <tr>\n",
        "      <th>2</th>\n",
        "      <td>1/5/2017</td>\n",
        "      <td>607000</td>\n",
        "      <td>13370</td>\n",
-       "      <td>3.49</td>\n",
-       "      <td>4.12697</td>\n",
        "      <td>116.9</td>\n",
        "      <td>4936881.99</td>\n",
-       "      <td>53.76</td>\n",
        "    </tr>\n",
        "    <tr>\n",
        "      <th>3</th>\n",
        "      <td>1/6/2017</td>\n",
        "      <td>606000</td>\n",
        "      <td>13347</td>\n",
-       "      <td>3.49</td>\n",
-       "      <td>4.13105</td>\n",
        "      <td>116.9</td>\n",
        "      <td>4936881.99</td>\n",
-       "      <td>53.99</td>\n",
        "    </tr>\n",
        "    <tr>\n",
        "      <th>4</th>\n",
        "      <td>1/9/2017</td>\n",
        "      <td>602000</td>\n",
        "      <td>13385</td>\n",
-       "      <td>3.49</td>\n",
-       "      <td>4.14132</td>\n",
        "      <td>116.9</td>\n",
        "      <td>4936881.99</td>\n",
-       "      <td>51.96</td>\n",
        "    </tr>\n",
        "  </tbody>\n",
        "</table>\n",
        "</div>"
       ],
       "text/plain": [
-       "       Date   Price   Kurs  Inflasi  IndONIA  Cadangan Devisa  \\\n",
-       "0  1/3/2017  606000  13485     3.49  4.12408            116.9   \n",
-       "1  1/4/2017  606000  13478     3.49  4.12935            116.9   \n",
-       "2  1/5/2017  607000  13370     3.49  4.12697            116.9   \n",
-       "3  1/6/2017  606000  13347     3.49  4.13105            116.9   \n",
-       "4  1/9/2017  602000  13385     3.49  4.14132            116.9   \n",
-       "\n",
-       "   Money Supply (M2)  Minyak  \n",
-       "0         4936881.99   52.33  \n",
-       "1         4936881.99   53.26  \n",
-       "2         4936881.99   53.76  \n",
-       "3         4936881.99   53.99  \n",
-       "4         4936881.99   51.96  "
+       "       Date   Price   Kurs  Cadangan Devisa  Money Supply (M2)\n",
+       "0  1/3/2017  606000  13485            116.9         4936881.99\n",
+       "1  1/4/2017  606000  13478            116.9         4936881.99\n",
+       "2  1/5/2017  607000  13370            116.9         4936881.99\n",
+       "3  1/6/2017  606000  13347            116.9         4936881.99\n",
+       "4  1/9/2017  602000  13385            116.9         4936881.99"
       ]
      },
      "execution_count": 3,
@@ -246,26 +221,26 @@
     }
    ],
    "source": [
-    "df = pd.read_csv('/kaggle/input/datasethargaemasindikatormoneter/Data Gabungan Lengkap.csv')\n",
+    "df = pd.read_csv('/kaggle/input/datasethargaemasindikatormoneter/Final Dataset Gold Prediction.csv')\n",
     "df.head()"
    ]
   },
   {
    "cell_type": "code",
    "execution_count": 4,
-   "id": "77b41396",
+   "id": "21973e9c",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-05-25T10:10:00.238905Z",
-     "iopub.status.busy": "2025-05-25T10:10:00.238662Z",
-     "iopub.status.idle": "2025-05-25T10:10:00.263571Z",
-     "shell.execute_reply": "2025-05-25T10:10:00.262753Z"
+     "iopub.execute_input": "2025-05-28T07:23:32.980101Z",
+     "iopub.status.busy": "2025-05-28T07:23:32.979835Z",
+     "iopub.status.idle": "2025-05-28T07:23:33.003771Z",
+     "shell.execute_reply": "2025-05-28T07:23:33.002949Z"
     },
     "papermill": {
-     "duration": 0.032184,
-     "end_time": "2025-05-25T10:10:00.264738",
+     "duration": 0.030805,
+     "end_time": "2025-05-28T07:23:33.004899",
      "exception": false,
-     "start_time": "2025-05-25T10:10:00.232554",
+     "start_time": "2025-05-28T07:23:32.974094",
      "status": "completed"
     },
     "tags": []
@@ -277,19 +252,16 @@
      "text": [
       "<class 'pandas.core.frame.DataFrame'>\n",
       "RangeIndex: 1932 entries, 0 to 1931\n",
-      "Data columns (total 8 columns):\n",
+      "Data columns (total 5 columns):\n",
       " #   Column             Non-Null Count  Dtype  \n",
       "---  ------             --------------  -----  \n",
       " 0   Date               1932 non-null   object \n",
       " 1   Price              1932 non-null   int64  \n",
       " 2   Kurs               1932 non-null   int64  \n",
-      " 3   Inflasi            1932 non-null   float64\n",
-      " 4   IndONIA            1932 non-null   float64\n",
-      " 5   Cadangan Devisa    1932 non-null   float64\n",
-      " 6   Money Supply (M2)  1932 non-null   float64\n",
-      " 7   Minyak             1932 non-null   float64\n",
-      "dtypes: float64(5), int64(2), object(1)\n",
-      "memory usage: 120.9+ KB\n"
+      " 3   Cadangan Devisa    1932 non-null   float64\n",
+      " 4   Money Supply (M2)  1932 non-null   float64\n",
+      "dtypes: float64(2), int64(2), object(1)\n",
+      "memory usage: 75.6+ KB\n"
      ]
     }
    ],
@@ -299,13 +271,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "a08aa9aa",
+   "id": "c04b14c2",
    "metadata": {
     "papermill": {
-     "duration": 0.005169,
-     "end_time": "2025-05-25T10:10:00.275660",
+     "duration": 0.005351,
+     "end_time": "2025-05-28T07:23:33.015657",
      "exception": false,
-     "start_time": "2025-05-25T10:10:00.270491",
+     "start_time": "2025-05-28T07:23:33.010306",
      "status": "completed"
     },
     "tags": []
@@ -317,44 +289,44 @@
   {
    "cell_type": "code",
    "execution_count": 5,
-   "id": "15f031e2",
+   "id": "2a7e3ea5",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-05-25T10:10:00.287310Z",
-     "iopub.status.busy": "2025-05-25T10:10:00.287037Z",
-     "iopub.status.idle": "2025-05-25T10:10:00.293189Z",
-     "shell.execute_reply": "2025-05-25T10:10:00.292407Z"
+     "iopub.execute_input": "2025-05-28T07:23:33.026951Z",
+     "iopub.status.busy": "2025-05-28T07:23:33.026714Z",
+     "iopub.status.idle": "2025-05-28T07:23:33.031496Z",
+     "shell.execute_reply": "2025-05-28T07:23:33.030889Z"
     },
     "papermill": {
-     "duration": 0.013326,
-     "end_time": "2025-05-25T10:10:00.294505",
+     "duration": 0.011643,
+     "end_time": "2025-05-28T07:23:33.032578",
      "exception": false,
-     "start_time": "2025-05-25T10:10:00.281179",
+     "start_time": "2025-05-28T07:23:33.020935",
      "status": "completed"
     },
     "tags": []
    },
    "outputs": [],
    "source": [
-    "df.drop(['Kurs', 'Money Supply (M2)', 'IndONIA', 'Cadangan Devisa', 'Minyak'], axis=1, inplace=True)"
+    "df.drop(['Kurs', 'Cadangan Devisa', 'Money Supply (M2)'], axis=1, inplace=True)"
    ]
   },
   {
    "cell_type": "code",
    "execution_count": 6,
-   "id": "c6f82e5c",
+   "id": "7e8873c1",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-05-25T10:10:00.306311Z",
-     "iopub.status.busy": "2025-05-25T10:10:00.306108Z",
-     "iopub.status.idle": "2025-05-25T10:10:00.318089Z",
-     "shell.execute_reply": "2025-05-25T10:10:00.317351Z"
+     "iopub.execute_input": "2025-05-28T07:23:33.043732Z",
+     "iopub.status.busy": "2025-05-28T07:23:33.043528Z",
+     "iopub.status.idle": "2025-05-28T07:23:33.055236Z",
+     "shell.execute_reply": "2025-05-28T07:23:33.054431Z"
     },
     "papermill": {
-     "duration": 0.019349,
-     "end_time": "2025-05-25T10:10:00.319398",
+     "duration": 0.018619,
+     "end_time": "2025-05-28T07:23:33.056449",
      "exception": false,
-     "start_time": "2025-05-25T10:10:00.300049",
+     "start_time": "2025-05-28T07:23:33.037830",
      "status": "completed"
     },
     "tags": []
@@ -369,19 +341,19 @@
   {
    "cell_type": "code",
    "execution_count": 7,
-   "id": "bffe4e6c",
+   "id": "0a341d37",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-05-25T10:10:00.331643Z",
-     "iopub.status.busy": "2025-05-25T10:10:00.331440Z",
-     "iopub.status.idle": "2025-05-25T10:10:00.337210Z",
-     "shell.execute_reply": "2025-05-25T10:10:00.336457Z"
+     "iopub.execute_input": "2025-05-28T07:23:33.068668Z",
+     "iopub.status.busy": "2025-05-28T07:23:33.068442Z",
+     "iopub.status.idle": "2025-05-28T07:23:33.074828Z",
+     "shell.execute_reply": "2025-05-28T07:23:33.074012Z"
     },
     "papermill": {
-     "duration": 0.013289,
-     "end_time": "2025-05-25T10:10:00.338350",
+     "duration": 0.014656,
+     "end_time": "2025-05-28T07:23:33.076316",
      "exception": false,
-     "start_time": "2025-05-25T10:10:00.325061",
+     "start_time": "2025-05-28T07:23:33.061660",
      "status": "completed"
     },
     "tags": []
@@ -396,19 +368,19 @@
   {
    "cell_type": "code",
    "execution_count": 8,
-   "id": "2bc83d4f",
+   "id": "bc2b4112",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-05-25T10:10:00.349762Z",
-     "iopub.status.busy": "2025-05-25T10:10:00.349541Z",
-     "iopub.status.idle": "2025-05-25T10:10:00.357082Z",
-     "shell.execute_reply": "2025-05-25T10:10:00.356319Z"
+     "iopub.execute_input": "2025-05-28T07:23:33.087983Z",
+     "iopub.status.busy": "2025-05-28T07:23:33.087777Z",
+     "iopub.status.idle": "2025-05-28T07:23:33.094674Z",
+     "shell.execute_reply": "2025-05-28T07:23:33.094056Z"
     },
     "papermill": {
-     "duration": 0.014874,
-     "end_time": "2025-05-25T10:10:00.358416",
+     "duration": 0.014328,
+     "end_time": "2025-05-28T07:23:33.095951",
      "exception": false,
-     "start_time": "2025-05-25T10:10:00.343542",
+     "start_time": "2025-05-28T07:23:33.081623",
      "status": "completed"
     },
     "tags": []
@@ -437,7 +409,6 @@
        "      <th></th>\n",
        "      <th>Date</th>\n",
        "      <th>Price</th>\n",
-       "      <th>Inflasi</th>\n",
        "    </tr>\n",
        "  </thead>\n",
        "  <tbody>\n",
@@ -445,43 +416,38 @@
        "      <th>0</th>\n",
        "      <td>2017-01-03</td>\n",
        "      <td>606000.0</td>\n",
-       "      <td>3.49</td>\n",
        "    </tr>\n",
        "    <tr>\n",
        "      <th>1</th>\n",
        "      <td>2017-01-04</td>\n",
        "      <td>606000.0</td>\n",
-       "      <td>3.49</td>\n",
        "    </tr>\n",
        "    <tr>\n",
        "      <th>2</th>\n",
        "      <td>2017-01-05</td>\n",
        "      <td>607000.0</td>\n",
-       "      <td>3.49</td>\n",
        "    </tr>\n",
        "    <tr>\n",
        "      <th>3</th>\n",
        "      <td>2017-01-06</td>\n",
        "      <td>606000.0</td>\n",
-       "      <td>3.49</td>\n",
        "    </tr>\n",
        "    <tr>\n",
        "      <th>4</th>\n",
        "      <td>2017-01-09</td>\n",
        "      <td>602000.0</td>\n",
-       "      <td>3.49</td>\n",
        "    </tr>\n",
        "  </tbody>\n",
        "</table>\n",
        "</div>"
       ],
       "text/plain": [
-       "        Date     Price  Inflasi\n",
-       "0 2017-01-03  606000.0     3.49\n",
-       "1 2017-01-04  606000.0     3.49\n",
-       "2 2017-01-05  607000.0     3.49\n",
-       "3 2017-01-06  606000.0     3.49\n",
-       "4 2017-01-09  602000.0     3.49"
+       "        Date     Price\n",
+       "0 2017-01-03  606000.0\n",
+       "1 2017-01-04  606000.0\n",
+       "2 2017-01-05  607000.0\n",
+       "3 2017-01-06  606000.0\n",
+       "4 2017-01-09  602000.0"
       ]
      },
      "execution_count": 8,
@@ -496,19 +462,19 @@
   {
    "cell_type": "code",
    "execution_count": 9,
-   "id": "95131624",
+   "id": "b282d664",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-05-25T10:10:00.371321Z",
-     "iopub.status.busy": "2025-05-25T10:10:00.371117Z",
-     "iopub.status.idle": "2025-05-25T10:10:00.376885Z",
-     "shell.execute_reply": "2025-05-25T10:10:00.376122Z"
+     "iopub.execute_input": "2025-05-28T07:23:33.107822Z",
+     "iopub.status.busy": "2025-05-28T07:23:33.107614Z",
+     "iopub.status.idle": "2025-05-28T07:23:33.113049Z",
+     "shell.execute_reply": "2025-05-28T07:23:33.112424Z"
     },
     "papermill": {
-     "duration": 0.01396,
-     "end_time": "2025-05-25T10:10:00.378334",
+     "duration": 0.012687,
+     "end_time": "2025-05-28T07:23:33.114356",
      "exception": false,
-     "start_time": "2025-05-25T10:10:00.364374",
+     "start_time": "2025-05-28T07:23:33.101669",
      "status": "completed"
     },
     "tags": []
@@ -532,19 +498,19 @@
   {
    "cell_type": "code",
    "execution_count": 10,
-   "id": "1d790fb5",
+   "id": "6d5bc350",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-05-25T10:10:00.390381Z",
-     "iopub.status.busy": "2025-05-25T10:10:00.390143Z",
-     "iopub.status.idle": "2025-05-25T10:10:00.395451Z",
-     "shell.execute_reply": "2025-05-25T10:10:00.394766Z"
+     "iopub.execute_input": "2025-05-28T07:23:33.125982Z",
+     "iopub.status.busy": "2025-05-28T07:23:33.125783Z",
+     "iopub.status.idle": "2025-05-28T07:23:33.130499Z",
+     "shell.execute_reply": "2025-05-28T07:23:33.129696Z"
     },
     "papermill": {
-     "duration": 0.012857,
-     "end_time": "2025-05-25T10:10:00.396693",
+     "duration": 0.011844,
+     "end_time": "2025-05-28T07:23:33.131672",
      "exception": false,
-     "start_time": "2025-05-25T10:10:00.383836",
+     "start_time": "2025-05-28T07:23:33.119828",
      "status": "completed"
     },
     "tags": []
@@ -568,19 +534,19 @@
   {
    "cell_type": "code",
    "execution_count": 11,
-   "id": "2317f207",
+   "id": "de56cd19",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-05-25T10:10:00.409166Z",
-     "iopub.status.busy": "2025-05-25T10:10:00.408897Z",
-     "iopub.status.idle": "2025-05-25T10:10:00.416701Z",
-     "shell.execute_reply": "2025-05-25T10:10:00.415922Z"
+     "iopub.execute_input": "2025-05-28T07:23:33.143688Z",
+     "iopub.status.busy": "2025-05-28T07:23:33.143486Z",
+     "iopub.status.idle": "2025-05-28T07:23:33.150758Z",
+     "shell.execute_reply": "2025-05-28T07:23:33.149784Z"
     },
     "papermill": {
-     "duration": 0.015567,
-     "end_time": "2025-05-25T10:10:00.418071",
+     "duration": 0.014422,
+     "end_time": "2025-05-28T07:23:33.151891",
      "exception": false,
-     "start_time": "2025-05-25T10:10:00.402504",
+     "start_time": "2025-05-28T07:23:33.137469",
      "status": "completed"
     },
     "tags": []
@@ -592,14 +558,13 @@
      "text": [
       "<class 'pandas.core.frame.DataFrame'>\n",
       "RangeIndex: 1932 entries, 0 to 1931\n",
-      "Data columns (total 3 columns):\n",
-      " #   Column   Non-Null Count  Dtype         \n",
-      "---  ------   --------------  -----         \n",
-      " 0   Date     1932 non-null   datetime64[ns]\n",
-      " 1   Price    1932 non-null   float64       \n",
-      " 2   Inflasi  1932 non-null   float64       \n",
-      "dtypes: datetime64[ns](1), float64(2)\n",
-      "memory usage: 45.4 KB\n"
+      "Data columns (total 2 columns):\n",
+      " #   Column  Non-Null Count  Dtype         \n",
+      "---  ------  --------------  -----         \n",
+      " 0   Date    1932 non-null   datetime64[ns]\n",
+      " 1   Price   1932 non-null   float64       \n",
+      "dtypes: datetime64[ns](1), float64(1)\n",
+      "memory usage: 30.3 KB\n"
      ]
     }
    ],
@@ -609,13 +574,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "9b00d246",
+   "id": "03107c4b",
    "metadata": {
     "papermill": {
-     "duration": 0.005974,
-     "end_time": "2025-05-25T10:10:00.430014",
+     "duration": 0.005307,
+     "end_time": "2025-05-28T07:23:33.163008",
      "exception": false,
-     "start_time": "2025-05-25T10:10:00.424040",
+     "start_time": "2025-05-28T07:23:33.157701",
      "status": "completed"
     },
     "tags": []
@@ -627,19 +592,19 @@
   {
    "cell_type": "code",
    "execution_count": 12,
-   "id": "a1f3d0c3",
+   "id": "91bf93bd",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-05-25T10:10:00.441998Z",
-     "iopub.status.busy": "2025-05-25T10:10:00.441754Z",
-     "iopub.status.idle": "2025-05-25T10:10:00.448443Z",
-     "shell.execute_reply": "2025-05-25T10:10:00.447765Z"
+     "iopub.execute_input": "2025-05-28T07:23:33.175163Z",
+     "iopub.status.busy": "2025-05-28T07:23:33.174893Z",
+     "iopub.status.idle": "2025-05-28T07:23:33.181831Z",
+     "shell.execute_reply": "2025-05-28T07:23:33.181212Z"
     },
     "papermill": {
-     "duration": 0.014073,
-     "end_time": "2025-05-25T10:10:00.449568",
+     "duration": 0.014522,
+     "end_time": "2025-05-28T07:23:33.183018",
      "exception": false,
-     "start_time": "2025-05-25T10:10:00.435495",
+     "start_time": "2025-05-28T07:23:33.168496",
      "status": "completed"
     },
     "tags": []
@@ -666,19 +631,19 @@
   {
    "cell_type": "code",
    "execution_count": 13,
-   "id": "910fc2d7",
+   "id": "4cce33d4",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-05-25T10:10:00.461576Z",
-     "iopub.status.busy": "2025-05-25T10:10:00.461378Z",
-     "iopub.status.idle": "2025-05-25T10:10:00.892361Z",
-     "shell.execute_reply": "2025-05-25T10:10:00.891394Z"
+     "iopub.execute_input": "2025-05-28T07:23:33.195265Z",
+     "iopub.status.busy": "2025-05-28T07:23:33.194995Z",
+     "iopub.status.idle": "2025-05-28T07:23:33.672595Z",
+     "shell.execute_reply": "2025-05-28T07:23:33.671779Z"
     },
     "papermill": {
-     "duration": 0.4388,
-     "end_time": "2025-05-25T10:10:00.893992",
+     "duration": 0.485771,
+     "end_time": "2025-05-28T07:23:33.674630",
      "exception": false,
-     "start_time": "2025-05-25T10:10:00.455192",
+     "start_time": "2025-05-28T07:23:33.188859",
      "status": "completed"
     },
     "tags": []
@@ -723,13 +688,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "21c8bb8f",
+   "id": "9e825758",
    "metadata": {
     "papermill": {
-     "duration": 0.008288,
-     "end_time": "2025-05-25T10:10:00.911307",
+     "duration": 0.007302,
+     "end_time": "2025-05-28T07:23:33.689721",
      "exception": false,
-     "start_time": "2025-05-25T10:10:00.903019",
+     "start_time": "2025-05-28T07:23:33.682419",
      "status": "completed"
     },
     "tags": []
@@ -741,19 +706,19 @@
   {
    "cell_type": "code",
    "execution_count": 14,
-   "id": "1b8319e3",
+   "id": "52dd0308",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-05-25T10:10:00.928396Z",
-     "iopub.status.busy": "2025-05-25T10:10:00.928119Z",
-     "iopub.status.idle": "2025-05-25T10:10:00.938707Z",
-     "shell.execute_reply": "2025-05-25T10:10:00.937910Z"
+     "iopub.execute_input": "2025-05-28T07:23:33.705161Z",
+     "iopub.status.busy": "2025-05-28T07:23:33.704888Z",
+     "iopub.status.idle": "2025-05-28T07:23:33.714546Z",
+     "shell.execute_reply": "2025-05-28T07:23:33.713741Z"
     },
     "papermill": {
-     "duration": 0.020422,
-     "end_time": "2025-05-25T10:10:00.939989",
+     "duration": 0.018548,
+     "end_time": "2025-05-28T07:23:33.715743",
      "exception": false,
-     "start_time": "2025-05-25T10:10:00.919567",
+     "start_time": "2025-05-28T07:23:33.697195",
      "status": "completed"
     },
     "tags": []
@@ -780,13 +745,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "61626f22",
+   "id": "a87567c4",
    "metadata": {
     "papermill": {
-     "duration": 0.007849,
-     "end_time": "2025-05-25T10:10:00.956063",
+     "duration": 0.007504,
+     "end_time": "2025-05-28T07:23:33.730702",
      "exception": false,
-     "start_time": "2025-05-25T10:10:00.948214",
+     "start_time": "2025-05-28T07:23:33.723198",
      "status": "completed"
     },
     "tags": []
@@ -798,19 +763,19 @@
   {
    "cell_type": "code",
    "execution_count": 15,
-   "id": "8e66c89f",
+   "id": "ac006885",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-05-25T10:10:00.972158Z",
-     "iopub.status.busy": "2025-05-25T10:10:00.971914Z",
-     "iopub.status.idle": "2025-05-25T10:10:00.975161Z",
-     "shell.execute_reply": "2025-05-25T10:10:00.974376Z"
+     "iopub.execute_input": "2025-05-28T07:23:33.746193Z",
+     "iopub.status.busy": "2025-05-28T07:23:33.745956Z",
+     "iopub.status.idle": "2025-05-28T07:23:33.748706Z",
+     "shell.execute_reply": "2025-05-28T07:23:33.748121Z"
     },
     "papermill": {
-     "duration": 0.012694,
-     "end_time": "2025-05-25T10:10:00.976346",
+     "duration": 0.011893,
+     "end_time": "2025-05-28T07:23:33.749971",
      "exception": false,
-     "start_time": "2025-05-25T10:10:00.963652",
+     "start_time": "2025-05-28T07:23:33.738078",
      "status": "completed"
     },
     "tags": []
@@ -823,19 +788,19 @@
   {
    "cell_type": "code",
    "execution_count": 16,
-   "id": "775d4177",
+   "id": "6fef8b9f",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-05-25T10:10:00.993023Z",
-     "iopub.status.busy": "2025-05-25T10:10:00.992782Z",
-     "iopub.status.idle": "2025-05-25T10:10:00.996546Z",
-     "shell.execute_reply": "2025-05-25T10:10:00.995726Z"
+     "iopub.execute_input": "2025-05-28T07:23:33.765663Z",
+     "iopub.status.busy": "2025-05-28T07:23:33.765450Z",
+     "iopub.status.idle": "2025-05-28T07:23:33.769050Z",
+     "shell.execute_reply": "2025-05-28T07:23:33.768419Z"
     },
     "papermill": {
-     "duration": 0.01357,
-     "end_time": "2025-05-25T10:10:00.997978",
+     "duration": 0.012759,
+     "end_time": "2025-05-28T07:23:33.770254",
      "exception": false,
-     "start_time": "2025-05-25T10:10:00.984408",
+     "start_time": "2025-05-28T07:23:33.757495",
      "status": "completed"
     },
     "tags": []
@@ -849,19 +814,19 @@
   {
    "cell_type": "code",
    "execution_count": 17,
-   "id": "cb398aa9",
+   "id": "d4681aa7",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-05-25T10:10:01.014193Z",
-     "iopub.status.busy": "2025-05-25T10:10:01.013962Z",
-     "iopub.status.idle": "2025-05-25T10:10:01.018538Z",
-     "shell.execute_reply": "2025-05-25T10:10:01.017723Z"
+     "iopub.execute_input": "2025-05-28T07:23:33.785745Z",
+     "iopub.status.busy": "2025-05-28T07:23:33.785543Z",
+     "iopub.status.idle": "2025-05-28T07:23:33.789873Z",
+     "shell.execute_reply": "2025-05-28T07:23:33.789109Z"
     },
     "papermill": {
-     "duration": 0.01423,
-     "end_time": "2025-05-25T10:10:01.019810",
+     "duration": 0.013541,
+     "end_time": "2025-05-28T07:23:33.791263",
      "exception": false,
-     "start_time": "2025-05-25T10:10:01.005580",
+     "start_time": "2025-05-28T07:23:33.777722",
      "status": "completed"
     },
     "tags": []
@@ -879,19 +844,19 @@
   {
    "cell_type": "code",
    "execution_count": 18,
-   "id": "d89d2f24",
+   "id": "6df2a58b",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-05-25T10:10:01.036159Z",
-     "iopub.status.busy": "2025-05-25T10:10:01.035961Z",
-     "iopub.status.idle": "2025-05-25T10:10:01.039547Z",
-     "shell.execute_reply": "2025-05-25T10:10:01.038963Z"
+     "iopub.execute_input": "2025-05-28T07:23:33.807623Z",
+     "iopub.status.busy": "2025-05-28T07:23:33.807394Z",
+     "iopub.status.idle": "2025-05-28T07:23:33.811139Z",
+     "shell.execute_reply": "2025-05-28T07:23:33.810333Z"
     },
     "papermill": {
-     "duration": 0.012754,
-     "end_time": "2025-05-25T10:10:01.040716",
+     "duration": 0.013012,
+     "end_time": "2025-05-28T07:23:33.812318",
      "exception": false,
-     "start_time": "2025-05-25T10:10:01.027962",
+     "start_time": "2025-05-28T07:23:33.799306",
      "status": "completed"
     },
     "tags": []
@@ -905,19 +870,19 @@
   {
    "cell_type": "code",
    "execution_count": 19,
-   "id": "dae3481e",
+   "id": "21d4c5c2",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-05-25T10:10:01.057146Z",
-     "iopub.status.busy": "2025-05-25T10:10:01.056908Z",
-     "iopub.status.idle": "2025-05-25T10:10:01.060894Z",
-     "shell.execute_reply": "2025-05-25T10:10:01.060237Z"
+     "iopub.execute_input": "2025-05-28T07:23:33.840025Z",
+     "iopub.status.busy": "2025-05-28T07:23:33.839740Z",
+     "iopub.status.idle": "2025-05-28T07:23:33.844288Z",
+     "shell.execute_reply": "2025-05-28T07:23:33.843594Z"
     },
     "papermill": {
-     "duration": 0.013193,
-     "end_time": "2025-05-25T10:10:01.062030",
+     "duration": 0.018496,
+     "end_time": "2025-05-28T07:23:33.845618",
      "exception": false,
-     "start_time": "2025-05-25T10:10:01.048837",
+     "start_time": "2025-05-28T07:23:33.827122",
      "status": "completed"
     },
     "tags": []
@@ -934,13 +899,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "3033c8bf",
+   "id": "cf627cd4",
    "metadata": {
     "papermill": {
-     "duration": 0.007523,
-     "end_time": "2025-05-25T10:10:01.077308",
+     "duration": 0.007879,
+     "end_time": "2025-05-28T07:23:33.862611",
      "exception": false,
-     "start_time": "2025-05-25T10:10:01.069785",
+     "start_time": "2025-05-28T07:23:33.854732",
      "status": "completed"
     },
     "tags": []
@@ -952,19 +917,19 @@
   {
    "cell_type": "code",
    "execution_count": 20,
-   "id": "fabbab69",
+   "id": "c3995f86",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-05-25T10:10:01.093486Z",
-     "iopub.status.busy": "2025-05-25T10:10:01.093261Z",
-     "iopub.status.idle": "2025-05-25T10:10:01.098153Z",
-     "shell.execute_reply": "2025-05-25T10:10:01.097559Z"
+     "iopub.execute_input": "2025-05-28T07:23:33.879417Z",
+     "iopub.status.busy": "2025-05-28T07:23:33.879204Z",
+     "iopub.status.idle": "2025-05-28T07:23:33.883819Z",
+     "shell.execute_reply": "2025-05-28T07:23:33.883193Z"
     },
     "papermill": {
-     "duration": 0.014528,
-     "end_time": "2025-05-25T10:10:01.099368",
+     "duration": 0.014426,
+     "end_time": "2025-05-28T07:23:33.885075",
      "exception": false,
-     "start_time": "2025-05-25T10:10:01.084840",
+     "start_time": "2025-05-28T07:23:33.870649",
      "status": "completed"
     },
     "tags": []
@@ -980,19 +945,19 @@
   {
    "cell_type": "code",
    "execution_count": 21,
-   "id": "4b21f3ae",
+   "id": "e7363098",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-05-25T10:10:01.115511Z",
-     "iopub.status.busy": "2025-05-25T10:10:01.115290Z",
-     "iopub.status.idle": "2025-05-25T10:10:01.118964Z",
-     "shell.execute_reply": "2025-05-25T10:10:01.118381Z"
+     "iopub.execute_input": "2025-05-28T07:23:33.901635Z",
+     "iopub.status.busy": "2025-05-28T07:23:33.901423Z",
+     "iopub.status.idle": "2025-05-28T07:23:33.905309Z",
+     "shell.execute_reply": "2025-05-28T07:23:33.904616Z"
     },
     "papermill": {
-     "duration": 0.013268,
-     "end_time": "2025-05-25T10:10:01.120205",
+     "duration": 0.013439,
+     "end_time": "2025-05-28T07:23:33.906585",
      "exception": false,
-     "start_time": "2025-05-25T10:10:01.106937",
+     "start_time": "2025-05-28T07:23:33.893146",
      "status": "completed"
     },
     "tags": []
@@ -1008,19 +973,19 @@
   {
    "cell_type": "code",
    "execution_count": 22,
-   "id": "e5e72a98",
+   "id": "714a5873",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-05-25T10:10:01.136275Z",
-     "iopub.status.busy": "2025-05-25T10:10:01.136054Z",
-     "iopub.status.idle": "2025-05-25T10:10:01.141741Z",
-     "shell.execute_reply": "2025-05-25T10:10:01.140995Z"
+     "iopub.execute_input": "2025-05-28T07:23:33.923150Z",
+     "iopub.status.busy": "2025-05-28T07:23:33.922891Z",
+     "iopub.status.idle": "2025-05-28T07:23:33.928423Z",
+     "shell.execute_reply": "2025-05-28T07:23:33.927684Z"
     },
     "papermill": {
-     "duration": 0.015024,
-     "end_time": "2025-05-25T10:10:01.143064",
+     "duration": 0.015035,
+     "end_time": "2025-05-28T07:23:33.929624",
      "exception": false,
-     "start_time": "2025-05-25T10:10:01.128040",
+     "start_time": "2025-05-28T07:23:33.914589",
      "status": "completed"
     },
     "tags": []
@@ -1046,13 +1011,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "82af68d0",
+   "id": "fb99ea69",
    "metadata": {
     "papermill": {
-     "duration": 0.007487,
-     "end_time": "2025-05-25T10:10:01.158276",
+     "duration": 0.007255,
+     "end_time": "2025-05-28T07:23:33.944926",
      "exception": false,
-     "start_time": "2025-05-25T10:10:01.150789",
+     "start_time": "2025-05-28T07:23:33.937671",
      "status": "completed"
     },
     "tags": []
@@ -1064,19 +1029,19 @@
   {
    "cell_type": "code",
    "execution_count": 23,
-   "id": "a0e72cd6",
+   "id": "ee328483",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-05-25T10:10:01.174193Z",
-     "iopub.status.busy": "2025-05-25T10:10:01.173988Z",
-     "iopub.status.idle": "2025-05-25T10:10:04.024534Z",
-     "shell.execute_reply": "2025-05-25T10:10:04.023815Z"
+     "iopub.execute_input": "2025-05-28T07:23:33.960334Z",
+     "iopub.status.busy": "2025-05-28T07:23:33.960124Z",
+     "iopub.status.idle": "2025-05-28T07:23:36.842519Z",
+     "shell.execute_reply": "2025-05-28T07:23:36.841681Z"
     },
     "papermill": {
-     "duration": 2.860091,
-     "end_time": "2025-05-25T10:10:04.025699",
+     "duration": 2.891368,
+     "end_time": "2025-05-28T07:23:36.843713",
      "exception": false,
-     "start_time": "2025-05-25T10:10:01.165608",
+     "start_time": "2025-05-28T07:23:33.952345",
      "status": "completed"
     },
     "tags": []
@@ -1210,19 +1175,19 @@
   {
    "cell_type": "code",
    "execution_count": 24,
-   "id": "5624ae82",
+   "id": "5a7188eb",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-05-25T10:10:04.043915Z",
-     "iopub.status.busy": "2025-05-25T10:10:04.043643Z",
-     "iopub.status.idle": "2025-05-25T10:10:04.050415Z",
-     "shell.execute_reply": "2025-05-25T10:10:04.049482Z"
+     "iopub.execute_input": "2025-05-28T07:23:36.860816Z",
+     "iopub.status.busy": "2025-05-28T07:23:36.860562Z",
+     "iopub.status.idle": "2025-05-28T07:23:36.866438Z",
+     "shell.execute_reply": "2025-05-28T07:23:36.865859Z"
     },
     "papermill": {
-     "duration": 0.016952,
-     "end_time": "2025-05-25T10:10:04.051696",
+     "duration": 0.015432,
+     "end_time": "2025-05-28T07:23:36.867564",
      "exception": false,
-     "start_time": "2025-05-25T10:10:04.034744",
+     "start_time": "2025-05-28T07:23:36.852132",
      "status": "completed"
     },
     "tags": []
@@ -1236,19 +1201,19 @@
   {
    "cell_type": "code",
    "execution_count": 25,
-   "id": "2e6f382c",
+   "id": "aef6c240",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-05-25T10:10:04.069617Z",
-     "iopub.status.busy": "2025-05-25T10:10:04.069349Z",
-     "iopub.status.idle": "2025-05-25T10:10:30.534171Z",
-     "shell.execute_reply": "2025-05-25T10:10:30.533504Z"
+     "iopub.execute_input": "2025-05-28T07:23:36.884313Z",
+     "iopub.status.busy": "2025-05-28T07:23:36.884110Z",
+     "iopub.status.idle": "2025-05-28T07:24:03.465614Z",
+     "shell.execute_reply": "2025-05-28T07:24:03.464918Z"
     },
     "papermill": {
-     "duration": 26.47502,
-     "end_time": "2025-05-25T10:10:30.535468",
+     "duration": 26.59116,
+     "end_time": "2025-05-28T07:24:03.466805",
      "exception": false,
-     "start_time": "2025-05-25T10:10:04.060448",
+     "start_time": "2025-05-28T07:23:36.875645",
      "status": "completed"
     },
     "tags": []
@@ -1259,105 +1224,105 @@
      "output_type": "stream",
      "text": [
       "Epoch 1/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m5s\u001b[0m 35ms/step - loss: 0.0217 - val_loss: 0.0011\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m5s\u001b[0m 34ms/step - loss: 0.0153 - val_loss: 5.0158e-04\n",
       "Epoch 2/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 0.0012 - val_loss: 6.6758e-04\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 12ms/step - loss: 0.0012 - val_loss: 2.9629e-04\n",
       "Epoch 3/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 8.1203e-04 - val_loss: 7.2667e-04\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 12ms/step - loss: 8.1631e-04 - val_loss: 0.0018\n",
       "Epoch 4/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 7.3302e-04 - val_loss: 3.0283e-04\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 7.9041e-04 - val_loss: 8.3779e-04\n",
       "Epoch 5/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 7.3474e-04 - val_loss: 0.0017\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 12ms/step - loss: 5.9344e-04 - val_loss: 2.7813e-04\n",
       "Epoch 6/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 7.5229e-04 - val_loss: 6.0055e-04\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 12ms/step - loss: 7.1708e-04 - val_loss: 0.0019\n",
       "Epoch 7/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 12ms/step - loss: 6.4375e-04 - val_loss: 2.8879e-04\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 6.2370e-04 - val_loss: 5.5392e-04\n",
       "Epoch 8/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 7.0563e-04 - val_loss: 0.0011\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 12ms/step - loss: 6.0204e-04 - val_loss: 0.0020\n",
       "Epoch 9/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 6.0535e-04 - val_loss: 3.4708e-04\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 12ms/step - loss: 5.1354e-04 - val_loss: 4.8646e-04\n",
       "Epoch 10/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 6.3954e-04 - val_loss: 8.3512e-04\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 12ms/step - loss: 5.4168e-04 - val_loss: 3.4624e-04\n",
       "Epoch 11/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 4.7332e-04 - val_loss: 5.6441e-04\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 12ms/step - loss: 6.1204e-04 - val_loss: 8.8597e-04\n",
       "Epoch 12/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 5.1673e-04 - val_loss: 6.0754e-04\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 12ms/step - loss: 4.8470e-04 - val_loss: 3.1415e-04\n",
       "Epoch 13/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 4.9616e-04 - val_loss: 3.1444e-04\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 12ms/step - loss: 5.1961e-04 - val_loss: 4.3991e-04\n",
       "Epoch 14/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 5.2455e-04 - val_loss: 2.7498e-04\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 13ms/step - loss: 4.5952e-04 - val_loss: 2.9329e-04\n",
       "Epoch 15/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 12ms/step - loss: 5.7209e-04 - val_loss: 7.3999e-04\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m1s\u001b[0m 14ms/step - loss: 5.4271e-04 - val_loss: 0.0018\n",
       "Epoch 16/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 5.4317e-04 - val_loss: 0.0012\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 13ms/step - loss: 4.7876e-04 - val_loss: 0.0021\n",
       "Epoch 17/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 5.0490e-04 - val_loss: 0.0016\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 13ms/step - loss: 4.7053e-04 - val_loss: 2.4464e-04\n",
       "Epoch 18/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 4.3937e-04 - val_loss: 3.3646e-04\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 4.7705e-04 - val_loss: 4.7249e-04\n",
       "Epoch 19/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 5.5096e-04 - val_loss: 4.0385e-04\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 12ms/step - loss: 5.1319e-04 - val_loss: 3.8338e-04\n",
       "Epoch 20/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 3.8746e-04 - val_loss: 3.1735e-04\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 4.5083e-04 - val_loss: 2.7782e-04\n",
       "Epoch 21/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 3.8893e-04 - val_loss: 3.4383e-04\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 12ms/step - loss: 4.3175e-04 - val_loss: 0.0011\n",
       "Epoch 22/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 4.5322e-04 - val_loss: 4.4344e-04\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 4.7053e-04 - val_loss: 3.8059e-04\n",
       "Epoch 23/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 3.6186e-04 - val_loss: 2.7483e-04\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 3.9115e-04 - val_loss: 0.0012\n",
       "Epoch 24/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 4.0513e-04 - val_loss: 3.7691e-04\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 12ms/step - loss: 5.5557e-04 - val_loss: 7.1340e-04\n",
       "Epoch 25/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 4.0565e-04 - val_loss: 4.9031e-04\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 12ms/step - loss: 3.8632e-04 - val_loss: 3.7435e-04\n",
       "Epoch 26/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 4.2377e-04 - val_loss: 0.0011\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 4.5627e-04 - val_loss: 6.8997e-04\n",
       "Epoch 27/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 4.4404e-04 - val_loss: 4.2085e-04\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 4.2245e-04 - val_loss: 3.4892e-04\n",
       "Epoch 28/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 4.4088e-04 - val_loss: 3.7165e-04\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 3.4695e-04 - val_loss: 0.0012\n",
       "Epoch 29/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 4.4265e-04 - val_loss: 8.0898e-04\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 4.3527e-04 - val_loss: 2.7169e-04\n",
       "Epoch 30/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 12ms/step - loss: 3.7885e-04 - val_loss: 5.1604e-04\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 3.6579e-04 - val_loss: 5.8102e-04\n",
       "Epoch 31/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 13ms/step - loss: 3.7835e-04 - val_loss: 6.8430e-04\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 3.7181e-04 - val_loss: 5.9567e-04\n",
       "Epoch 32/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 12ms/step - loss: 3.9649e-04 - val_loss: 6.9846e-04\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 3.6002e-04 - val_loss: 2.7449e-04\n",
       "Epoch 33/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 13ms/step - loss: 3.3500e-04 - val_loss: 9.7677e-04\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 12ms/step - loss: 4.1348e-04 - val_loss: 9.5403e-04\n",
       "Epoch 34/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 3.5816e-04 - val_loss: 7.0810e-04\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 3.3175e-04 - val_loss: 2.7004e-04\n",
       "Epoch 35/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 4.1654e-04 - val_loss: 4.3434e-04\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 12ms/step - loss: 3.3546e-04 - val_loss: 6.6788e-04\n",
       "Epoch 36/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 3.4501e-04 - val_loss: 3.0664e-04\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 12ms/step - loss: 3.1767e-04 - val_loss: 3.0315e-04\n",
       "Epoch 37/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 3.2473e-04 - val_loss: 0.0012\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 12ms/step - loss: 3.9208e-04 - val_loss: 0.0014\n",
       "Epoch 38/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 12ms/step - loss: 3.9280e-04 - val_loss: 6.4581e-04\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 12ms/step - loss: 3.9357e-04 - val_loss: 0.0036\n",
       "Epoch 39/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 3.2832e-04 - val_loss: 9.8725e-04\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 12ms/step - loss: 3.9762e-04 - val_loss: 6.2628e-04\n",
       "Epoch 40/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 3.4468e-04 - val_loss: 6.0717e-04\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 12ms/step - loss: 3.6290e-04 - val_loss: 9.4433e-04\n",
       "Epoch 41/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 3.6301e-04 - val_loss: 5.2910e-04\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 3.3854e-04 - val_loss: 7.8602e-04\n",
       "Epoch 42/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 3.8807e-04 - val_loss: 7.2385e-04\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 3.2041e-04 - val_loss: 3.0822e-04\n",
       "Epoch 43/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 3.3939e-04 - val_loss: 2.5213e-04\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 3.1906e-04 - val_loss: 9.0632e-04\n",
       "Epoch 44/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 3.4856e-04 - val_loss: 6.8398e-04\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 2.7645e-04 - val_loss: 4.2324e-04\n",
       "Epoch 45/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 3.1230e-04 - val_loss: 5.4956e-04\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 3.6770e-04 - val_loss: 0.0013\n",
       "Epoch 46/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 3.3922e-04 - val_loss: 5.5764e-04\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 3.1820e-04 - val_loss: 0.0015\n",
       "Epoch 47/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 12ms/step - loss: 3.4208e-04 - val_loss: 9.7660e-04\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 3.5479e-04 - val_loss: 2.6305e-04\n",
       "Epoch 48/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 2.9948e-04 - val_loss: 2.9921e-04\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 2.9316e-04 - val_loss: 5.8315e-04\n",
       "Epoch 49/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 3.5018e-04 - val_loss: 0.0012\n",
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 12ms/step - loss: 2.8095e-04 - val_loss: 7.4831e-04\n",
       "Epoch 50/50\n",
-      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 3.0763e-04 - val_loss: 0.0013\n"
+      "\u001b[1m36/36\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step - loss: 3.0494e-04 - val_loss: 9.1747e-04\n"
      ]
     }
    ],
@@ -1369,19 +1334,19 @@
   {
    "cell_type": "code",
    "execution_count": 26,
-   "id": "b8ec9a5e",
+   "id": "e1f3624a",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-05-25T10:10:30.591356Z",
-     "iopub.status.busy": "2025-05-25T10:10:30.591113Z",
-     "iopub.status.idle": "2025-05-25T10:10:31.092172Z",
-     "shell.execute_reply": "2025-05-25T10:10:31.091326Z"
+     "iopub.execute_input": "2025-05-28T07:24:03.521882Z",
+     "iopub.status.busy": "2025-05-28T07:24:03.521627Z",
+     "iopub.status.idle": "2025-05-28T07:24:04.037226Z",
+     "shell.execute_reply": "2025-05-28T07:24:04.036419Z"
     },
     "papermill": {
-     "duration": 0.529723,
-     "end_time": "2025-05-25T10:10:31.093354",
+     "duration": 0.544099,
+     "end_time": "2025-05-28T07:24:04.038596",
      "exception": false,
-     "start_time": "2025-05-25T10:10:30.563631",
+     "start_time": "2025-05-28T07:24:03.494497",
      "status": "completed"
     },
     "tags": []
@@ -1391,8 +1356,8 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "\u001b[1m23/23\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step\n",
-      "GRU - MSE: 0.0012693634803706407, RMSE: 0.035628127657381055, MAE: 0.024731636795664442, R²: 0.9639074031582677\n"
+      "\u001b[1m23/23\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 12ms/step\n",
+      "GRU - MSE: 0.0009174747254037939, RMSE: 0.030289845252225934, MAE: 0.02109677810465143, R²: 0.9739128737445565\n"
      ]
     }
    ],
@@ -1409,13 +1374,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "59839a68",
+   "id": "4caf3df5",
    "metadata": {
     "papermill": {
-     "duration": 0.025648,
-     "end_time": "2025-05-25T10:10:31.145652",
+     "duration": 0.026338,
+     "end_time": "2025-05-28T07:24:04.091867",
      "exception": false,
-     "start_time": "2025-05-25T10:10:31.120004",
+     "start_time": "2025-05-28T07:24:04.065529",
      "status": "completed"
     },
     "tags": []
@@ -1427,19 +1392,19 @@
   {
    "cell_type": "code",
    "execution_count": 27,
-   "id": "ca8fc351",
+   "id": "8b8f445f",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-05-25T10:10:31.198447Z",
-     "iopub.status.busy": "2025-05-25T10:10:31.198208Z",
-     "iopub.status.idle": "2025-05-25T10:17:42.674205Z",
-     "shell.execute_reply": "2025-05-25T10:17:42.673345Z"
+     "iopub.execute_input": "2025-05-28T07:24:04.145212Z",
+     "iopub.status.busy": "2025-05-28T07:24:04.144921Z",
+     "iopub.status.idle": "2025-05-28T07:31:16.859029Z",
+     "shell.execute_reply": "2025-05-28T07:31:16.858249Z"
     },
     "papermill": {
-     "duration": 431.503927,
-     "end_time": "2025-05-25T10:17:42.675802",
+     "duration": 432.742246,
+     "end_time": "2025-05-28T07:31:16.860270",
      "exception": false,
-     "start_time": "2025-05-25T10:10:31.171875",
+     "start_time": "2025-05-28T07:24:04.118024",
      "status": "completed"
     },
     "tags": []
@@ -1452,7 +1417,7 @@
       "Training with units=50, dropout=0.2, batch_size=16, epochs=30\n",
       "\u001b[1m23/23\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step\n",
       "Training with units=50, dropout=0.2, batch_size=16, epochs=50\n",
-      "\u001b[1m23/23\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 12ms/step\n",
+      "\u001b[1m23/23\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step\n",
       "Training with units=50, dropout=0.2, batch_size=32, epochs=30\n",
       "\u001b[1m23/23\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step\n",
       "Training with units=50, dropout=0.2, batch_size=32, epochs=50\n",
@@ -1460,7 +1425,7 @@
       "Training with units=50, dropout=0.3, batch_size=16, epochs=30\n",
       "\u001b[1m23/23\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step\n",
       "Training with units=50, dropout=0.3, batch_size=16, epochs=50\n",
-      "\u001b[1m23/23\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 12ms/step\n",
+      "\u001b[1m23/23\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 13ms/step\n",
       "Training with units=50, dropout=0.3, batch_size=32, epochs=30\n",
       "\u001b[1m23/23\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step\n",
       "Training with units=50, dropout=0.3, batch_size=32, epochs=50\n",
@@ -1472,15 +1437,15 @@
       "Training with units=100, dropout=0.2, batch_size=32, epochs=30\n",
       "\u001b[1m23/23\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step\n",
       "Training with units=100, dropout=0.2, batch_size=32, epochs=50\n",
-      "\u001b[1m23/23\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 12ms/step\n",
+      "\u001b[1m23/23\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step\n",
       "Training with units=100, dropout=0.3, batch_size=16, epochs=30\n",
       "\u001b[1m23/23\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step\n",
       "Training with units=100, dropout=0.3, batch_size=16, epochs=50\n",
-      "\u001b[1m23/23\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 12ms/step\n",
+      "\u001b[1m23/23\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step\n",
       "Training with units=100, dropout=0.3, batch_size=32, epochs=30\n",
       "\u001b[1m23/23\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step\n",
       "Training with units=100, dropout=0.3, batch_size=32, epochs=50\n",
-      "\u001b[1m23/23\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 12ms/step\n"
+      "\u001b[1m23/23\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 11ms/step\n"
      ]
     },
     {
@@ -1516,15 +1481,15 @@
        "  </thead>\n",
        "  <tbody>\n",
        "    <tr>\n",
-       "      <th>13</th>\n",
+       "      <th>8</th>\n",
        "      <td>100</td>\n",
-       "      <td>0.3</td>\n",
+       "      <td>0.2</td>\n",
        "      <td>16</td>\n",
-       "      <td>50</td>\n",
-       "      <td>0.000204</td>\n",
-       "      <td>0.014285</td>\n",
-       "      <td>0.011644</td>\n",
-       "      <td>0.994198</td>\n",
+       "      <td>30</td>\n",
+       "      <td>0.000190</td>\n",
+       "      <td>0.013780</td>\n",
+       "      <td>0.010437</td>\n",
+       "      <td>0.994601</td>\n",
        "    </tr>\n",
        "    <tr>\n",
        "      <th>14</th>\n",
@@ -1533,108 +1498,9 @@
        "      <td>32</td>\n",
        "      <td>30</td>\n",
        "      <td>0.000208</td>\n",
-       "      <td>0.014433</td>\n",
-       "      <td>0.011908</td>\n",
-       "      <td>0.994077</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>10</th>\n",
-       "      <td>100</td>\n",
-       "      <td>0.2</td>\n",
-       "      <td>32</td>\n",
-       "      <td>30</td>\n",
-       "      <td>0.000238</td>\n",
-       "      <td>0.015414</td>\n",
-       "      <td>0.011410</td>\n",
-       "      <td>0.993244</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>0</th>\n",
-       "      <td>50</td>\n",
-       "      <td>0.2</td>\n",
-       "      <td>16</td>\n",
-       "      <td>30</td>\n",
-       "      <td>0.000380</td>\n",
-       "      <td>0.019506</td>\n",
-       "      <td>0.013963</td>\n",
-       "      <td>0.989182</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>4</th>\n",
-       "      <td>50</td>\n",
-       "      <td>0.3</td>\n",
-       "      <td>16</td>\n",
-       "      <td>30</td>\n",
-       "      <td>0.000388</td>\n",
-       "      <td>0.019686</td>\n",
-       "      <td>0.017270</td>\n",
-       "      <td>0.988981</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>1</th>\n",
-       "      <td>50</td>\n",
-       "      <td>0.2</td>\n",
-       "      <td>16</td>\n",
-       "      <td>50</td>\n",
-       "      <td>0.000433</td>\n",
-       "      <td>0.020813</td>\n",
-       "      <td>0.014364</td>\n",
-       "      <td>0.987683</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>7</th>\n",
-       "      <td>50</td>\n",
-       "      <td>0.3</td>\n",
-       "      <td>32</td>\n",
-       "      <td>50</td>\n",
-       "      <td>0.000597</td>\n",
-       "      <td>0.024436</td>\n",
-       "      <td>0.017525</td>\n",
-       "      <td>0.983022</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>15</th>\n",
-       "      <td>100</td>\n",
-       "      <td>0.3</td>\n",
-       "      <td>32</td>\n",
-       "      <td>50</td>\n",
-       "      <td>0.000619</td>\n",
-       "      <td>0.024873</td>\n",
-       "      <td>0.017297</td>\n",
-       "      <td>0.982409</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>8</th>\n",
-       "      <td>100</td>\n",
-       "      <td>0.2</td>\n",
-       "      <td>16</td>\n",
-       "      <td>30</td>\n",
-       "      <td>0.000854</td>\n",
-       "      <td>0.029221</td>\n",
-       "      <td>0.022755</td>\n",
-       "      <td>0.975721</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>2</th>\n",
-       "      <td>50</td>\n",
-       "      <td>0.2</td>\n",
-       "      <td>32</td>\n",
-       "      <td>30</td>\n",
-       "      <td>0.000903</td>\n",
-       "      <td>0.030051</td>\n",
-       "      <td>0.022075</td>\n",
-       "      <td>0.974322</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>6</th>\n",
-       "      <td>50</td>\n",
-       "      <td>0.3</td>\n",
-       "      <td>32</td>\n",
-       "      <td>30</td>\n",
-       "      <td>0.000967</td>\n",
-       "      <td>0.031102</td>\n",
-       "      <td>0.021360</td>\n",
-       "      <td>0.972495</td>\n",
+       "      <td>0.014434</td>\n",
+       "      <td>0.010593</td>\n",
+       "      <td>0.994076</td>\n",
        "    </tr>\n",
        "    <tr>\n",
        "      <th>11</th>\n",
@@ -1642,10 +1508,21 @@
        "      <td>0.2</td>\n",
        "      <td>32</td>\n",
        "      <td>50</td>\n",
-       "      <td>0.000990</td>\n",
-       "      <td>0.031466</td>\n",
-       "      <td>0.022481</td>\n",
-       "      <td>0.971848</td>\n",
+       "      <td>0.000229</td>\n",
+       "      <td>0.015135</td>\n",
+       "      <td>0.010770</td>\n",
+       "      <td>0.993487</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>10</th>\n",
+       "      <td>100</td>\n",
+       "      <td>0.2</td>\n",
+       "      <td>32</td>\n",
+       "      <td>30</td>\n",
+       "      <td>0.000250</td>\n",
+       "      <td>0.015800</td>\n",
+       "      <td>0.011602</td>\n",
+       "      <td>0.992901</td>\n",
        "    </tr>\n",
        "    <tr>\n",
        "      <th>9</th>\n",
@@ -1653,32 +1530,76 @@
        "      <td>0.2</td>\n",
        "      <td>16</td>\n",
        "      <td>50</td>\n",
-       "      <td>0.001067</td>\n",
-       "      <td>0.032659</td>\n",
-       "      <td>0.025254</td>\n",
-       "      <td>0.969673</td>\n",
+       "      <td>0.000311</td>\n",
+       "      <td>0.017622</td>\n",
+       "      <td>0.012749</td>\n",
+       "      <td>0.991170</td>\n",
        "    </tr>\n",
        "    <tr>\n",
-       "      <th>12</th>\n",
-       "      <td>100</td>\n",
+       "      <th>2</th>\n",
+       "      <td>50</td>\n",
+       "      <td>0.2</td>\n",
+       "      <td>32</td>\n",
+       "      <td>30</td>\n",
+       "      <td>0.000322</td>\n",
+       "      <td>0.017946</td>\n",
+       "      <td>0.012906</td>\n",
+       "      <td>0.990842</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>4</th>\n",
+       "      <td>50</td>\n",
        "      <td>0.3</td>\n",
        "      <td>16</td>\n",
        "      <td>30</td>\n",
-       "      <td>0.001067</td>\n",
-       "      <td>0.032661</td>\n",
-       "      <td>0.030470</td>\n",
-       "      <td>0.969669</td>\n",
+       "      <td>0.000379</td>\n",
+       "      <td>0.019462</td>\n",
+       "      <td>0.014083</td>\n",
+       "      <td>0.989230</td>\n",
        "    </tr>\n",
        "    <tr>\n",
-       "      <th>5</th>\n",
-       "      <td>50</td>\n",
+       "      <th>13</th>\n",
+       "      <td>100</td>\n",
        "      <td>0.3</td>\n",
        "      <td>16</td>\n",
        "      <td>50</td>\n",
-       "      <td>0.001461</td>\n",
-       "      <td>0.038227</td>\n",
-       "      <td>0.030948</td>\n",
-       "      <td>0.958450</td>\n",
+       "      <td>0.000621</td>\n",
+       "      <td>0.024918</td>\n",
+       "      <td>0.018276</td>\n",
+       "      <td>0.982346</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>7</th>\n",
+       "      <td>50</td>\n",
+       "      <td>0.3</td>\n",
+       "      <td>32</td>\n",
+       "      <td>50</td>\n",
+       "      <td>0.000780</td>\n",
+       "      <td>0.027932</td>\n",
+       "      <td>0.018934</td>\n",
+       "      <td>0.977816</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1</th>\n",
+       "      <td>50</td>\n",
+       "      <td>0.2</td>\n",
+       "      <td>16</td>\n",
+       "      <td>50</td>\n",
+       "      <td>0.000848</td>\n",
+       "      <td>0.029116</td>\n",
+       "      <td>0.022720</td>\n",
+       "      <td>0.975895</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>0</th>\n",
+       "      <td>50</td>\n",
+       "      <td>0.2</td>\n",
+       "      <td>16</td>\n",
+       "      <td>30</td>\n",
+       "      <td>0.001026</td>\n",
+       "      <td>0.032027</td>\n",
+       "      <td>0.024741</td>\n",
+       "      <td>0.970835</td>\n",
        "    </tr>\n",
        "    <tr>\n",
        "      <th>3</th>\n",
@@ -1686,10 +1607,54 @@
        "      <td>0.2</td>\n",
        "      <td>32</td>\n",
        "      <td>50</td>\n",
-       "      <td>0.001772</td>\n",
-       "      <td>0.042099</td>\n",
-       "      <td>0.035535</td>\n",
-       "      <td>0.949606</td>\n",
+       "      <td>0.001086</td>\n",
+       "      <td>0.032951</td>\n",
+       "      <td>0.023794</td>\n",
+       "      <td>0.969128</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>6</th>\n",
+       "      <td>50</td>\n",
+       "      <td>0.3</td>\n",
+       "      <td>32</td>\n",
+       "      <td>30</td>\n",
+       "      <td>0.001158</td>\n",
+       "      <td>0.034026</td>\n",
+       "      <td>0.024362</td>\n",
+       "      <td>0.967080</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>5</th>\n",
+       "      <td>50</td>\n",
+       "      <td>0.3</td>\n",
+       "      <td>16</td>\n",
+       "      <td>50</td>\n",
+       "      <td>0.001228</td>\n",
+       "      <td>0.035042</td>\n",
+       "      <td>0.026849</td>\n",
+       "      <td>0.965086</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>15</th>\n",
+       "      <td>100</td>\n",
+       "      <td>0.3</td>\n",
+       "      <td>32</td>\n",
+       "      <td>50</td>\n",
+       "      <td>0.001750</td>\n",
+       "      <td>0.041829</td>\n",
+       "      <td>0.034024</td>\n",
+       "      <td>0.950250</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>12</th>\n",
+       "      <td>100</td>\n",
+       "      <td>0.3</td>\n",
+       "      <td>16</td>\n",
+       "      <td>30</td>\n",
+       "      <td>0.004195</td>\n",
+       "      <td>0.064770</td>\n",
+       "      <td>0.057815</td>\n",
+       "      <td>0.880715</td>\n",
        "    </tr>\n",
        "  </tbody>\n",
        "</table>\n",
@@ -1697,22 +1662,22 @@
       ],
       "text/plain": [
        "    units  dropout  batch_size  epochs       MSE      RMSE       MAE        R2\n",
-       "13    100      0.3          16      50  0.000204  0.014285  0.011644  0.994198\n",
-       "14    100      0.3          32      30  0.000208  0.014433  0.011908  0.994077\n",
-       "10    100      0.2          32      30  0.000238  0.015414  0.011410  0.993244\n",
-       "0      50      0.2          16      30  0.000380  0.019506  0.013963  0.989182\n",
-       "4      50      0.3          16      30  0.000388  0.019686  0.017270  0.988981\n",
-       "1      50      0.2          16      50  0.000433  0.020813  0.014364  0.987683\n",
-       "7      50      0.3          32      50  0.000597  0.024436  0.017525  0.983022\n",
-       "15    100      0.3          32      50  0.000619  0.024873  0.017297  0.982409\n",
-       "8     100      0.2          16      30  0.000854  0.029221  0.022755  0.975721\n",
-       "2      50      0.2          32      30  0.000903  0.030051  0.022075  0.974322\n",
-       "6      50      0.3          32      30  0.000967  0.031102  0.021360  0.972495\n",
-       "11    100      0.2          32      50  0.000990  0.031466  0.022481  0.971848\n",
-       "9     100      0.2          16      50  0.001067  0.032659  0.025254  0.969673\n",
-       "12    100      0.3          16      30  0.001067  0.032661  0.030470  0.969669\n",
-       "5      50      0.3          16      50  0.001461  0.038227  0.030948  0.958450\n",
-       "3      50      0.2          32      50  0.001772  0.042099  0.035535  0.949606"
+       "8     100      0.2          16      30  0.000190  0.013780  0.010437  0.994601\n",
+       "14    100      0.3          32      30  0.000208  0.014434  0.010593  0.994076\n",
+       "11    100      0.2          32      50  0.000229  0.015135  0.010770  0.993487\n",
+       "10    100      0.2          32      30  0.000250  0.015800  0.011602  0.992901\n",
+       "9     100      0.2          16      50  0.000311  0.017622  0.012749  0.991170\n",
+       "2      50      0.2          32      30  0.000322  0.017946  0.012906  0.990842\n",
+       "4      50      0.3          16      30  0.000379  0.019462  0.014083  0.989230\n",
+       "13    100      0.3          16      50  0.000621  0.024918  0.018276  0.982346\n",
+       "7      50      0.3          32      50  0.000780  0.027932  0.018934  0.977816\n",
+       "1      50      0.2          16      50  0.000848  0.029116  0.022720  0.975895\n",
+       "0      50      0.2          16      30  0.001026  0.032027  0.024741  0.970835\n",
+       "3      50      0.2          32      50  0.001086  0.032951  0.023794  0.969128\n",
+       "6      50      0.3          32      30  0.001158  0.034026  0.024362  0.967080\n",
+       "5      50      0.3          16      50  0.001228  0.035042  0.026849  0.965086\n",
+       "15    100      0.3          32      50  0.001750  0.041829  0.034024  0.950250\n",
+       "12    100      0.3          16      30  0.004195  0.064770  0.057815  0.880715"
       ]
      },
      "metadata": {},
@@ -1795,7 +1760,7 @@
    "dataSources": [
     {
      "datasetId": 7000808,
-     "sourceId": 11389513,
+     "sourceId": 11945960,
      "sourceType": "datasetVersion"
     }
    ],
@@ -1824,14 +1789,14 @@
   },
   "papermill": {
    "default_parameters": {},
-   "duration": 485.114173,
-   "end_time": "2025-05-25T10:17:45.806546",
+   "duration": 485.083599,
+   "end_time": "2025-05-28T07:31:19.702459",
    "environment_variables": {},
    "exception": null,
    "input_path": "__notebook__.ipynb",
    "output_path": "__notebook__.ipynb",
    "parameters": {},
-   "start_time": "2025-05-25T10:09:40.692373",
+   "start_time": "2025-05-28T07:23:14.618860",
    "version": "2.6.0"
   }
  },
